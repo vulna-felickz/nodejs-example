@@ -1,0 +1,15 @@
+{
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "dev",
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "ms-vscode.node-debug2",
+    "ms-vscode.vscode-typescript"
+  ],
+  "settings": {
+    "telemetry.enableTelemetry": false,
+    "extensions.ignoreRecommendations": true
+  },
+}
