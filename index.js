@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const packageDetails = require('./package.json');
+const version = require('./version');
 
 // Application
 const app = express();
@@ -9,7 +9,7 @@ const port = process.env.PORT || 8080;
 
 // Routes
 app.get('/', (req, res) => {
-  res.status(200).send(JSON.stringify({ name: packageDetails.name, version: packageDetails.version }));
+  res.status(200).send(JSON.stringify({ name: version.getName(), version: version.getVersion() }));
 });
 
 // Start the server
