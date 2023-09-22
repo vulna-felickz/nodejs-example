@@ -20,7 +20,8 @@ steps:
 
   - task: AdvancedSecurity-Codeql-Init@1
     inputs:
-      languages: "javascript"
+      languages: 'javascript'
+      querysuite: 'security-and-quality'
 
   - task: AdvancedSecurity-Dependency-Scanning@1
 
