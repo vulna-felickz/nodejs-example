@@ -39,6 +39,10 @@ app.get("/users", function (req, res) {
     search = req.params.q;
   }
 
+  // looking to trigger a js/regex/empty-character-class here from quality suite
+  if (!/[[{]\w+[]}]/.test(search))
+  console.log("Malformed input.");
+
   const squery = `SELECT * FROM users WHERE name LIKE '${search}';`
   pool.query(squery, (err, results) => {
     if (err) {
